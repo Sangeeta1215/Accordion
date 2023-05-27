@@ -1,4 +1,4 @@
-import { allAccordions } from "./module.js";
+fetch("module.json").then(data=>data.json()).then(allAccordions=>{
 const container = document.getElementById("accordionExample");
 function main(initial, final) {
   for (let i = initial; i < final; i++) {
@@ -39,3 +39,4 @@ container.addEventListener("click", (e) => {
     main(startfaq, endfaq)
   }
 });
+})
